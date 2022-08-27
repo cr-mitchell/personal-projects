@@ -35,6 +35,7 @@ void CheckingsAccount::withdraw(double amount)
 {
     if (balance < amount)
     {
+        balance = balance
     }
     else if (balance > amount)
     {
