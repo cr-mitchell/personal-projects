@@ -12,6 +12,7 @@ all the market knowledge */
 
 #include <iostream>
 #include <fstream>
+#include <cctype>
 #include "magic_checkings.h"
 using namespace std;
 
@@ -281,6 +282,8 @@ void command_loop()
         "or log out (q)? ";
         cin >> command;
 
+        command = tolower(command);
+
         if (command == 'c')
         {
             checkings();
@@ -315,6 +318,8 @@ void checkings()
         cout << "Would you like to withdraw (w)" <<
         ", deposit (d), or go back (q)? ";
         cin >> command;
+
+        command = tolower(command);
 
         if (command == 'w')
         {
