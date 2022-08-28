@@ -50,17 +50,14 @@ void CheckingsAccount::deposit(double amount)
 
 double CheckingsAccount::UpdatedBalance()
 {
-    /* This set of functions are used to generate a random floating point number
-    between 0 and 2 */
-    std::random_device random;
-    std::default_random_engine eng(random());
-    std::uniform_real_distribution<float> distr(0,2);
-
-    balance *= distr(eng);
+    double temp = (rand() % 21) / 10.0;
 
     // rounds the balance to 2 decimal places
-    float temp = int (balance * 100 + 0.5);
-    balance = (temp / 100);
+    balance *= temp;
+
+    // rounds the balance to 2 decimal places using int typecast
+    balance = (int) (balance * 100.0 + 0.5);
+    balance = balance / 100.0;
 
     return balance;
 }
