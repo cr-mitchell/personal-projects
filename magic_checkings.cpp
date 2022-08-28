@@ -10,6 +10,8 @@ by a randomly multiplying a floating point number between 0 and 2 everytime you 
 or withdraw money. This is a playful and not realistic stock simulator basically without
 all the market knowledge */
 
+//Compile in terminal: g++ -Wall -Wextra -o magic_checkings magic_checkings.cpp
+
 #include <iostream>
 #include <fstream>
 #include <cctype>
@@ -30,7 +32,7 @@ int main(int argc, char* argv[])
     // checks to see if argument count and argument was entered correctly
     if (argc != 2)
     {
-        cerr << "Usage: ./registration registerdata.csv" << endl;
+        cerr << "Usage: ./magic_checkings registerdata.csv" << endl;
         return 1;
     }
 
